@@ -1,21 +1,30 @@
 * {
   padding: 0;
   margin: 0;
-  transition: ease;
+  transition: 1s ease;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+head {
+  display: none;
+}
+
+body {
+  display: block;
+}
+
 :root {
   --background-color-main: rgb(255, 208, 0);
   --backgroung-color-secondary: grey;
-  --width: 80%;
+  --width: 70%;
 }
 
 h1 {
   font-size: 3em;
+  padding-top: 50px;
 }
 p {
   font-size: 1.5em;
@@ -28,7 +37,7 @@ General
 */
 
 header {
-  height: 50px;
+  height: 70px;
   background-color: var(--background-color-main);
   display: flex;
   justify-content: space-between;
@@ -38,12 +47,15 @@ header {
 }
 header img {
   max-height: 100%;
-  filter: invert();
+  filter: invert(100%);
 }
-#manu-links {
+#menu-links {
   display: flex;
   align-items: center;
   column-gap: 20px;
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 #section-about {
@@ -76,7 +88,7 @@ Gallery
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 30px 0;
   grid-row: 40px;
 }
 .gallery-card {
@@ -102,7 +114,6 @@ Gallery
     padding: 50px 0;
     gap: 5%;
     background-color: bisque;
-    grid
   }
   .gallery-card {
     width: 100%;
@@ -113,24 +124,23 @@ Gallery
 }
 
 @media screen and (min-width: 1500px) {
-    @keyframes backgroundColorChange {
-        0% {background-color: var(--background-color-main);
-
-        }
-        25% {background-color: blue;
-
-        }
-        50% {background-color: aqua;
-
-        }
-        75% {background-color: aqua;
-
-        }
-        100% {
-
-        }
-        
+  @keyframes backgroundColorChange {
+    0% {
+      background-color: var(--background-color-main);
     }
+    25% {
+      background-color: blue;
+    }
+    50% {
+      background-color: aqua;
+    }
+    75% {
+      background-color: greenyellow;
+    }
+    100% {
+      background-color: var(--backgroung-color-secondary);
+    }
+  }
   #section-gallery {
     grid-template-columns: repeat(3 1fr);
   }
@@ -152,18 +162,18 @@ Contact
   width: var(--width);
   display: flex;
   flex-direction: column;
-  margin: 0 15%;
+  align-items: center;
   row-gap: 20px;
 }
 #section-contact input {
   width: 100%;
   height: 50px;
   font-size: 1.5em;
+  border: none;
 }
 #section-contact textarea {
   width: 100%;
-  height: 25px;
-  font-size: 1.5em;
+  font-size: 1.9em;
   resize: none;
   border: none;
 }
@@ -171,7 +181,6 @@ Contact
   width: 25%;
   height: 50px;
   font-size: 1.5em;
-  resize: none;
-  border: none;
+  border-radius: 5px;
   background-color: blueviolet;
 }
